@@ -4,7 +4,7 @@ Para el MINOR Copiar el siguiente metodo en una rama Feature, luego esa rama fea
 def delete_element():
     data = request.get_json()
     if 'index' in data:
-        index = data['index']
+        index = int(data['index'])
         if 0 <= index < len(elements-2):
             removed_element = elements.pop(index)
             return jsonify({'message': 'Elemento eliminado exitosamente!', 'removed_element': removed_element}), 200

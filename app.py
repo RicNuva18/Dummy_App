@@ -5,11 +5,6 @@ app = Flask(__name__)
 # Lista para almacenar los elementos
 elements = []
 
-@app.route('/v1/get_elements', methods=['DELETE'])
-def delete_elements():
-    return jsonify(elements)
-
-
 @app.route('/v1/get_elements', methods=['GET'])
 def get_elements():
     return jsonify(elements)
